@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 // routes
-app.use("/api/plant", require("../backend/routes/PlantedRoute"));
+app.use("/api/plant", require("./routes/PlantedRoute.js"));
 
 // listen to port
 app.listen(process.env.PORT, () => {
