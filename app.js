@@ -9,7 +9,7 @@ require("dotenv").config();
 
 // db connection
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect('mongodb://localhost:27017/treesitos')
   .then(() => console.log("DB connected...✔️"))
   .catch(() => console.log("Could not connect to DB ❌"));
 
@@ -19,9 +19,9 @@ app.use(express.json());
 app.use(cors());
 
 // routes
-app.use("/api/plant", require("./routes/PlantedRoute.js"));
+app.use("/api/plants", require("./routes/PlantedRoute.js"));
 
 // listen to port
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log("Server up and running ⚡");
 });

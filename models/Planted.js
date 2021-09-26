@@ -9,8 +9,15 @@ const PlantedSchema = Schema({
   location: {
     type: String,
     required: [true, "Location required"],
-    unique: true,
     trim: true,
+  },
+  lat:{
+    type: Number,
+    required: [true, "Latitude required"],
+  },
+  lng:{
+    type: Number,
+    required: [true, "Longitude required"],
   },
   description: {
     type: String,
